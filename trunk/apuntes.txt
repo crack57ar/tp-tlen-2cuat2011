@@ -1,0 +1,16 @@
+Bueno..
+
+Estaria bueno usar Python que es bastante simple, en su defecto se puede hacer en java tambien. Lo que tenemos es 
+ANTLR que construye parser a partir de una gramatica LL(1) y nos da el codigo en python, java o algunos otros.
+
+En principio (creo que esta bien) la gramatica que dieron en el enunciado sin ambiguedad seria:
+
+E -> E? | E+ | (E) | D
+
+D -> DT | T
+
+T -> T|U | U
+
+U -> caracter | .
+
+Revisenlo... XD
