@@ -5,12 +5,20 @@ ANTLR que construye parser a partir de una gramatica LL(1) y nos da el codigo en
 
 En principio (creo que esta bien) la gramatica que dieron en el enunciado sin ambiguedad seria:
 
-E -> E? | E+ | (E) | D
+y = lambda 
 
-D -> DT | T
+expr -> concat expr'
+expr' -> '|'expr | y
 
-T -> T|U | U
+concat -> rep concat'
+concat' -> concat | y
 
-U -> caracter | .
+rep -> atom rep'
+rep' -> '*' | '+' | '?' | y
+
+atom -> caracter | '('expr')'
+
+caracter -> 'a'..'z' | 'A'..'Z' | '0'..'9' | '.' | ' '
+
 
 Revisenlo... XD
