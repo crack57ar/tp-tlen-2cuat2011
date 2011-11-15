@@ -22,3 +22,15 @@ caracter -> 'a'..'z' | 'A'..'Z' | '0'..'9' | '.' | ' '
 
 
 Revisenlo... XD
+
+ANTL
+
+expr : concat ('|'concat)*;
+
+concat : rep+;
+
+rep : atom ('*' | '+' | '?')?;
+
+atom : caracter | '('expr')';
+
+caracter : 'a'..'z' | 'A'..'Z' | '0'..'9' | '.' | ' ';

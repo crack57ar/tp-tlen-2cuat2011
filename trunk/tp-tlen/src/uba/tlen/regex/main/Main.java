@@ -1,12 +1,12 @@
 package uba.tlen.regex.main;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import org.antlr.runtime.ANTLRStringStream;
+import org.antlr.runtime.CommonTokenStream;
+import org.antlr.runtime.RecognitionException;
+import org.antlr.runtime.tree.CommonTree;
+
+import uba.tlen.regex.antlr.TlenLexer;
+import uba.tlen.regex.antlr.TlenParser;
 
 public class Main {
 
@@ -14,19 +14,17 @@ public class Main {
 	 * @param args
 	 */
 	
-	static File input = null;
-	static String ER = "";
+	static String input = null;
+	static String ER = "abcd";
 	
 	
 	/* podriamos usar opciones de linea de comandos, 
 	 * pero la catedra quiere que el primer parametro sea la ER y el segundo el path del archivo. */ 
 	 
 	public static boolean parseOptions(String[] args){
-		if(args.length != 3){
+		if(args.length == 3){
 			ER = args[1];
-			input = new File(args[2]);
-			if(input.exists())
-				return true;
+			input = args[2];			
 		}
 		return false;
 	}
@@ -37,27 +35,20 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		TGrep g = new TGrep();
-		g.setRegexp(ER);
-		
-		if(parseOptions(args)){
-			String line = "";
-			BufferedReader reader;
-			try {
-				reader = new BufferedReader(new FileReader(input));
-				while((line = reader.readLine()) != null){
-					g.search(line);
-				}
-			} catch (FileNotFoundException e) {
-				System.out.println("El archivo no existe");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}else{
-			printHelp();
-		}
-		
+		try {
+			parseOptions(args);
+			TlenLexer lex = new TlenLexer(new ANTLRStringStream(ER));
+			CommonTokenStream tokens = new CommonTokenStream(lex);
+			TlenParser parser = new TlenParser(tokens);
+
+			TlenParser.expr_return r = parser.expr();
+			
+			CommonTree t = (CommonTree)r.getTree();		
+			
+			System.out.println(t.toStringTree());
+		} catch (RecognitionException e)  {
+			e.printStackTrace();
+		} 
 
 	}
 
