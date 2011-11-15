@@ -34,3 +34,5 @@ rep : atom ('*' | '+' | '?')?;
 atom : caracter | '('expr')';
 
 caracter : 'a'..'z' | 'A'..'Z' | '0'..'9' | '.' | ' ';
+
+No me funciona bien el 'a'..'z' asi que ahora esta todo expandido.
