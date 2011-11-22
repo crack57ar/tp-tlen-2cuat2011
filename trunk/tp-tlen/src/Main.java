@@ -1,12 +1,8 @@
-package uba.tlen.regex.main;
-
 import org.antlr.runtime.ANTLRStringStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.tree.CommonTree;
 
-import uba.tlen.regex.antlr.TlenLexer;
-import uba.tlen.regex.antlr.TlenParser;
 
 public class Main {
 
@@ -15,7 +11,7 @@ public class Main {
 	 */
 	
 	static String input = null;
-	static String ER = "abcd";
+	static String ER = "((a)*(b)|cd)";
 	
 	
 	/* podriamos usar opciones de linea de comandos, 

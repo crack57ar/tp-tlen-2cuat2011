@@ -1,6 +1,4 @@
-package uba.tlen.regex.antlr;
-
-// $ANTLR 3.4 C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g 2011-11-15 12:53:45
+// $ANTLR 3.4 C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g 2011-11-22 10:59:29
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -111,7 +109,7 @@ public TreeAdaptor getTreeAdaptor() {
     return adaptor;
 }
     public String[] getTokenNames() { return TlenParser.tokenNames; }
-    public String getGrammarFileName() { return "C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g"; }
+    public String getGrammarFileName() { return "C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g"; }
 
 
     public static class s_return extends ParserRuleReturnScope {
@@ -121,7 +119,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "s"
-    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:8:1: s : expr EOF !;
+    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:9:1: s : expr EOF !;
     public final TlenParser.s_return s() throws RecognitionException {
         TlenParser.s_return retval = new TlenParser.s_return();
         retval.start = input.LT(1);
@@ -136,20 +134,20 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree EOF2_tree=null;
 
         try {
-            // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:8:3: ( expr EOF !)
-            // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:8:5: expr EOF !
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:9:3: ( expr EOF !)
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:9:5: expr EOF !
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_expr_in_s34);
+            pushFollow(FOLLOW_expr_in_s43);
             expr1=expr();
 
             state._fsp--;
 
             adaptor.addChild(root_0, expr1.getTree());
 
-            EOF2=(Token)match(input,EOF,FOLLOW_EOF_in_s36); 
+            EOF2=(Token)match(input,EOF,FOLLOW_EOF_in_s45); 
 
             }
 
@@ -182,7 +180,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "expr"
-    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:9:1: expr : dis ( '|' ^ dis )* ;
+    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:10:1: expr : dis ( '|' ^ dis )* ;
     public final TlenParser.expr_return expr() throws RecognitionException {
         TlenParser.expr_return retval = new TlenParser.expr_return();
         retval.start = input.LT(1);
@@ -199,20 +197,20 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree char_literal4_tree=null;
 
         try {
-            // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:9:6: ( dis ( '|' ^ dis )* )
-            // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:9:8: dis ( '|' ^ dis )*
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:10:6: ( dis ( '|' ^ dis )* )
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:10:8: dis ( '|' ^ dis )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_dis_in_expr44);
+            pushFollow(FOLLOW_dis_in_expr53);
             dis3=dis();
 
             state._fsp--;
 
             adaptor.addChild(root_0, dis3.getTree());
 
-            // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:9:11: ( '|' ^ dis )*
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:10:11: ( '|' ^ dis )*
             loop1:
             do {
                 int alt1=2;
@@ -225,16 +223,16 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:9:12: '|' ^ dis
+            	    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:10:12: '|' ^ dis
             	    {
-            	    char_literal4=(Token)match(input,72,FOLLOW_72_in_expr46); 
+            	    char_literal4=(Token)match(input,72,FOLLOW_72_in_expr55); 
             	    char_literal4_tree = 
             	    (CommonTree)adaptor.create(char_literal4)
             	    ;
             	    root_0 = (CommonTree)adaptor.becomeRoot(char_literal4_tree, root_0);
 
 
-            	    pushFollow(FOLLOW_dis_in_expr49);
+            	    pushFollow(FOLLOW_dis_in_expr58);
             	    dis5=dis();
 
             	    state._fsp--;
@@ -281,7 +279,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "dis"
-    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:10:1: dis : un ^ ( dis )? ;
+    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:11:1: dis : un ^ ( dis )? ;
     public final TlenParser.dis_return dis() throws RecognitionException {
         TlenParser.dis_return retval = new TlenParser.dis_return();
         retval.start = input.LT(1);
@@ -296,20 +294,20 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:10:5: ( un ^ ( dis )? )
-            // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:10:7: un ^ ( dis )?
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:11:5: ( un ^ ( dis )? )
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:11:7: un ^ ( dis )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_un_in_dis58);
+            pushFollow(FOLLOW_un_in_dis67);
             un6=un();
 
             state._fsp--;
 
             root_0 = (CommonTree)adaptor.becomeRoot(un6.getTree(), root_0);
 
-            // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:10:11: ( dis )?
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:11:11: ( dis )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -318,9 +316,9 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt2) {
                 case 1 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:10:11: dis
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:11:11: dis
                     {
-                    pushFollow(FOLLOW_dis_in_dis61);
+                    pushFollow(FOLLOW_dis_in_dis70);
                     dis7=dis();
 
                     state._fsp--;
@@ -364,7 +362,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "un"
-    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:11:1: un : atom ( '+' ^| '*' ^| '?' ^)? ;
+    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:12:1: un : atom ( '+' ^| '*' ^| '?' ^)? ;
     public final TlenParser.un_return un() throws RecognitionException {
         TlenParser.un_return retval = new TlenParser.un_return();
         retval.start = input.LT(1);
@@ -383,20 +381,20 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree char_literal11_tree=null;
 
         try {
-            // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:11:5: ( atom ( '+' ^| '*' ^| '?' ^)? )
-            // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:11:7: atom ( '+' ^| '*' ^| '?' ^)?
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:12:5: ( atom ( '+' ^| '*' ^| '?' ^)? )
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:12:7: atom ( '+' ^| '*' ^| '?' ^)?
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_atom_in_un70);
+            pushFollow(FOLLOW_atom_in_un79);
             atom8=atom();
 
             state._fsp--;
 
             adaptor.addChild(root_0, atom8.getTree());
 
-            // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:11:11: ( '+' ^| '*' ^| '?' ^)?
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:12:11: ( '+' ^| '*' ^| '?' ^)?
             int alt3=4;
             switch ( input.LA(1) ) {
                 case 7:
@@ -418,9 +416,9 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt3) {
                 case 1 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:11:12: '+' ^
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:12:12: '+' ^
                     {
-                    char_literal9=(Token)match(input,7,FOLLOW_7_in_un72); 
+                    char_literal9=(Token)match(input,7,FOLLOW_7_in_un81); 
                     char_literal9_tree = 
                     (CommonTree)adaptor.create(char_literal9)
                     ;
@@ -430,9 +428,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:11:17: '*' ^
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:12:17: '*' ^
                     {
-                    char_literal10=(Token)match(input,6,FOLLOW_6_in_un75); 
+                    char_literal10=(Token)match(input,6,FOLLOW_6_in_un84); 
                     char_literal10_tree = 
                     (CommonTree)adaptor.create(char_literal10)
                     ;
@@ -442,9 +440,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:11:22: '?' ^
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:12:22: '?' ^
                     {
-                    char_literal11=(Token)match(input,19,FOLLOW_19_in_un78); 
+                    char_literal11=(Token)match(input,19,FOLLOW_19_in_un87); 
                     char_literal11_tree = 
                     (CommonTree)adaptor.create(char_literal11)
                     ;
@@ -488,7 +486,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "atom"
-    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:12:1: atom : ( 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '.' | '(' expr ')' );
+    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:13:1: atom : ( 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '.' | '(' ! expr ')' !);
     public final TlenParser.atom_return atom() throws RecognitionException {
         TlenParser.atom_return retval = new TlenParser.atom_return();
         retval.start = input.LT(1);
@@ -631,7 +629,7 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree char_literal77_tree=null;
 
         try {
-            // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:12:6: ( 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '.' | '(' expr ')' )
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:13:6: ( 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '.' | '(' ! expr ')' !)
             int alt4=64;
             switch ( input.LA(1) ) {
             case 46:
@@ -964,12 +962,12 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt4) {
                 case 1 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:12:8: 'a'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:13:8: 'a'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal12=(Token)match(input,46,FOLLOW_46_in_atom88); 
+                    char_literal12=(Token)match(input,46,FOLLOW_46_in_atom97); 
                     char_literal12_tree = 
                     (CommonTree)adaptor.create(char_literal12)
                     ;
@@ -979,12 +977,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:12:14: 'b'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:13:14: 'b'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal13=(Token)match(input,47,FOLLOW_47_in_atom92); 
+                    char_literal13=(Token)match(input,47,FOLLOW_47_in_atom101); 
                     char_literal13_tree = 
                     (CommonTree)adaptor.create(char_literal13)
                     ;
@@ -994,12 +992,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:12:20: 'c'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:13:20: 'c'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal14=(Token)match(input,48,FOLLOW_48_in_atom96); 
+                    char_literal14=(Token)match(input,48,FOLLOW_48_in_atom105); 
                     char_literal14_tree = 
                     (CommonTree)adaptor.create(char_literal14)
                     ;
@@ -1009,12 +1007,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:12:26: 'd'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:13:26: 'd'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal15=(Token)match(input,49,FOLLOW_49_in_atom100); 
+                    char_literal15=(Token)match(input,49,FOLLOW_49_in_atom109); 
                     char_literal15_tree = 
                     (CommonTree)adaptor.create(char_literal15)
                     ;
@@ -1024,12 +1022,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 5 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:13:3: 'e'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:14:3: 'e'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal16=(Token)match(input,50,FOLLOW_50_in_atom106); 
+                    char_literal16=(Token)match(input,50,FOLLOW_50_in_atom115); 
                     char_literal16_tree = 
                     (CommonTree)adaptor.create(char_literal16)
                     ;
@@ -1039,12 +1037,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 6 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:13:9: 'f'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:14:9: 'f'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal17=(Token)match(input,51,FOLLOW_51_in_atom110); 
+                    char_literal17=(Token)match(input,51,FOLLOW_51_in_atom119); 
                     char_literal17_tree = 
                     (CommonTree)adaptor.create(char_literal17)
                     ;
@@ -1054,12 +1052,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 7 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:13:15: 'g'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:14:15: 'g'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal18=(Token)match(input,52,FOLLOW_52_in_atom114); 
+                    char_literal18=(Token)match(input,52,FOLLOW_52_in_atom123); 
                     char_literal18_tree = 
                     (CommonTree)adaptor.create(char_literal18)
                     ;
@@ -1069,12 +1067,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 8 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:13:21: 'h'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:14:21: 'h'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal19=(Token)match(input,53,FOLLOW_53_in_atom118); 
+                    char_literal19=(Token)match(input,53,FOLLOW_53_in_atom127); 
                     char_literal19_tree = 
                     (CommonTree)adaptor.create(char_literal19)
                     ;
@@ -1084,12 +1082,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 9 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:14:3: 'i'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:15:3: 'i'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal20=(Token)match(input,54,FOLLOW_54_in_atom124); 
+                    char_literal20=(Token)match(input,54,FOLLOW_54_in_atom133); 
                     char_literal20_tree = 
                     (CommonTree)adaptor.create(char_literal20)
                     ;
@@ -1099,12 +1097,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 10 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:14:9: 'j'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:15:9: 'j'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal21=(Token)match(input,55,FOLLOW_55_in_atom128); 
+                    char_literal21=(Token)match(input,55,FOLLOW_55_in_atom137); 
                     char_literal21_tree = 
                     (CommonTree)adaptor.create(char_literal21)
                     ;
@@ -1114,12 +1112,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 11 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:14:15: 'k'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:15:15: 'k'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal22=(Token)match(input,56,FOLLOW_56_in_atom132); 
+                    char_literal22=(Token)match(input,56,FOLLOW_56_in_atom141); 
                     char_literal22_tree = 
                     (CommonTree)adaptor.create(char_literal22)
                     ;
@@ -1129,12 +1127,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 12 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:14:21: 'l'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:15:21: 'l'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal23=(Token)match(input,57,FOLLOW_57_in_atom136); 
+                    char_literal23=(Token)match(input,57,FOLLOW_57_in_atom145); 
                     char_literal23_tree = 
                     (CommonTree)adaptor.create(char_literal23)
                     ;
@@ -1144,12 +1142,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 13 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:15:3: 'm'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:16:3: 'm'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal24=(Token)match(input,58,FOLLOW_58_in_atom142); 
+                    char_literal24=(Token)match(input,58,FOLLOW_58_in_atom151); 
                     char_literal24_tree = 
                     (CommonTree)adaptor.create(char_literal24)
                     ;
@@ -1159,12 +1157,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 14 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:15:9: 'n'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:16:9: 'n'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal25=(Token)match(input,59,FOLLOW_59_in_atom146); 
+                    char_literal25=(Token)match(input,59,FOLLOW_59_in_atom155); 
                     char_literal25_tree = 
                     (CommonTree)adaptor.create(char_literal25)
                     ;
@@ -1174,12 +1172,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 15 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:15:15: 'o'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:16:15: 'o'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal26=(Token)match(input,60,FOLLOW_60_in_atom150); 
+                    char_literal26=(Token)match(input,60,FOLLOW_60_in_atom159); 
                     char_literal26_tree = 
                     (CommonTree)adaptor.create(char_literal26)
                     ;
@@ -1189,12 +1187,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 16 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:15:21: 'p'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:16:21: 'p'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal27=(Token)match(input,61,FOLLOW_61_in_atom154); 
+                    char_literal27=(Token)match(input,61,FOLLOW_61_in_atom163); 
                     char_literal27_tree = 
                     (CommonTree)adaptor.create(char_literal27)
                     ;
@@ -1204,12 +1202,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 17 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:16:3: 'q'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:17:3: 'q'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal28=(Token)match(input,62,FOLLOW_62_in_atom160); 
+                    char_literal28=(Token)match(input,62,FOLLOW_62_in_atom169); 
                     char_literal28_tree = 
                     (CommonTree)adaptor.create(char_literal28)
                     ;
@@ -1219,12 +1217,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 18 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:16:9: 'r'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:17:9: 'r'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal29=(Token)match(input,63,FOLLOW_63_in_atom164); 
+                    char_literal29=(Token)match(input,63,FOLLOW_63_in_atom173); 
                     char_literal29_tree = 
                     (CommonTree)adaptor.create(char_literal29)
                     ;
@@ -1234,12 +1232,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 19 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:16:15: 's'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:17:15: 's'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal30=(Token)match(input,64,FOLLOW_64_in_atom168); 
+                    char_literal30=(Token)match(input,64,FOLLOW_64_in_atom177); 
                     char_literal30_tree = 
                     (CommonTree)adaptor.create(char_literal30)
                     ;
@@ -1249,12 +1247,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 20 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:16:21: 't'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:17:21: 't'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal31=(Token)match(input,65,FOLLOW_65_in_atom172); 
+                    char_literal31=(Token)match(input,65,FOLLOW_65_in_atom181); 
                     char_literal31_tree = 
                     (CommonTree)adaptor.create(char_literal31)
                     ;
@@ -1264,12 +1262,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 21 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:17:3: 'u'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:18:3: 'u'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal32=(Token)match(input,66,FOLLOW_66_in_atom178); 
+                    char_literal32=(Token)match(input,66,FOLLOW_66_in_atom187); 
                     char_literal32_tree = 
                     (CommonTree)adaptor.create(char_literal32)
                     ;
@@ -1279,12 +1277,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 22 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:17:9: 'v'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:18:9: 'v'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal33=(Token)match(input,67,FOLLOW_67_in_atom182); 
+                    char_literal33=(Token)match(input,67,FOLLOW_67_in_atom191); 
                     char_literal33_tree = 
                     (CommonTree)adaptor.create(char_literal33)
                     ;
@@ -1294,12 +1292,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 23 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:17:15: 'w'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:18:15: 'w'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal34=(Token)match(input,68,FOLLOW_68_in_atom186); 
+                    char_literal34=(Token)match(input,68,FOLLOW_68_in_atom195); 
                     char_literal34_tree = 
                     (CommonTree)adaptor.create(char_literal34)
                     ;
@@ -1309,12 +1307,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 24 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:17:21: 'x'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:18:21: 'x'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal35=(Token)match(input,69,FOLLOW_69_in_atom190); 
+                    char_literal35=(Token)match(input,69,FOLLOW_69_in_atom199); 
                     char_literal35_tree = 
                     (CommonTree)adaptor.create(char_literal35)
                     ;
@@ -1324,12 +1322,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 25 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:18:3: 'y'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:19:3: 'y'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal36=(Token)match(input,70,FOLLOW_70_in_atom196); 
+                    char_literal36=(Token)match(input,70,FOLLOW_70_in_atom205); 
                     char_literal36_tree = 
                     (CommonTree)adaptor.create(char_literal36)
                     ;
@@ -1339,12 +1337,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 26 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:18:9: 'z'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:19:9: 'z'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal37=(Token)match(input,71,FOLLOW_71_in_atom200); 
+                    char_literal37=(Token)match(input,71,FOLLOW_71_in_atom209); 
                     char_literal37_tree = 
                     (CommonTree)adaptor.create(char_literal37)
                     ;
@@ -1354,12 +1352,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 27 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:19:3: 'A'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:20:3: 'A'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal38=(Token)match(input,20,FOLLOW_20_in_atom207); 
+                    char_literal38=(Token)match(input,20,FOLLOW_20_in_atom216); 
                     char_literal38_tree = 
                     (CommonTree)adaptor.create(char_literal38)
                     ;
@@ -1369,12 +1367,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 28 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:19:9: 'B'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:20:9: 'B'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal39=(Token)match(input,21,FOLLOW_21_in_atom211); 
+                    char_literal39=(Token)match(input,21,FOLLOW_21_in_atom220); 
                     char_literal39_tree = 
                     (CommonTree)adaptor.create(char_literal39)
                     ;
@@ -1384,12 +1382,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 29 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:19:15: 'C'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:20:15: 'C'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal40=(Token)match(input,22,FOLLOW_22_in_atom215); 
+                    char_literal40=(Token)match(input,22,FOLLOW_22_in_atom224); 
                     char_literal40_tree = 
                     (CommonTree)adaptor.create(char_literal40)
                     ;
@@ -1399,12 +1397,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 30 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:19:21: 'D'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:20:21: 'D'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal41=(Token)match(input,23,FOLLOW_23_in_atom219); 
+                    char_literal41=(Token)match(input,23,FOLLOW_23_in_atom228); 
                     char_literal41_tree = 
                     (CommonTree)adaptor.create(char_literal41)
                     ;
@@ -1414,12 +1412,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 31 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:20:3: 'E'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:21:3: 'E'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal42=(Token)match(input,24,FOLLOW_24_in_atom225); 
+                    char_literal42=(Token)match(input,24,FOLLOW_24_in_atom234); 
                     char_literal42_tree = 
                     (CommonTree)adaptor.create(char_literal42)
                     ;
@@ -1429,12 +1427,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 32 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:20:9: 'F'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:21:9: 'F'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal43=(Token)match(input,25,FOLLOW_25_in_atom229); 
+                    char_literal43=(Token)match(input,25,FOLLOW_25_in_atom238); 
                     char_literal43_tree = 
                     (CommonTree)adaptor.create(char_literal43)
                     ;
@@ -1444,12 +1442,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 33 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:20:15: 'G'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:21:15: 'G'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal44=(Token)match(input,26,FOLLOW_26_in_atom233); 
+                    char_literal44=(Token)match(input,26,FOLLOW_26_in_atom242); 
                     char_literal44_tree = 
                     (CommonTree)adaptor.create(char_literal44)
                     ;
@@ -1459,12 +1457,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 34 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:20:21: 'H'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:21:21: 'H'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal45=(Token)match(input,27,FOLLOW_27_in_atom237); 
+                    char_literal45=(Token)match(input,27,FOLLOW_27_in_atom246); 
                     char_literal45_tree = 
                     (CommonTree)adaptor.create(char_literal45)
                     ;
@@ -1474,12 +1472,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 35 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:21:3: 'I'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:22:3: 'I'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal46=(Token)match(input,28,FOLLOW_28_in_atom243); 
+                    char_literal46=(Token)match(input,28,FOLLOW_28_in_atom252); 
                     char_literal46_tree = 
                     (CommonTree)adaptor.create(char_literal46)
                     ;
@@ -1489,12 +1487,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 36 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:21:9: 'J'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:22:9: 'J'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal47=(Token)match(input,29,FOLLOW_29_in_atom247); 
+                    char_literal47=(Token)match(input,29,FOLLOW_29_in_atom256); 
                     char_literal47_tree = 
                     (CommonTree)adaptor.create(char_literal47)
                     ;
@@ -1504,12 +1502,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 37 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:21:15: 'K'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:22:15: 'K'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal48=(Token)match(input,30,FOLLOW_30_in_atom251); 
+                    char_literal48=(Token)match(input,30,FOLLOW_30_in_atom260); 
                     char_literal48_tree = 
                     (CommonTree)adaptor.create(char_literal48)
                     ;
@@ -1519,12 +1517,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 38 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:21:21: 'L'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:22:21: 'L'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal49=(Token)match(input,31,FOLLOW_31_in_atom255); 
+                    char_literal49=(Token)match(input,31,FOLLOW_31_in_atom264); 
                     char_literal49_tree = 
                     (CommonTree)adaptor.create(char_literal49)
                     ;
@@ -1534,12 +1532,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 39 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:22:3: 'M'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:23:3: 'M'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal50=(Token)match(input,32,FOLLOW_32_in_atom261); 
+                    char_literal50=(Token)match(input,32,FOLLOW_32_in_atom270); 
                     char_literal50_tree = 
                     (CommonTree)adaptor.create(char_literal50)
                     ;
@@ -1549,12 +1547,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 40 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:22:9: 'N'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:23:9: 'N'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal51=(Token)match(input,33,FOLLOW_33_in_atom265); 
+                    char_literal51=(Token)match(input,33,FOLLOW_33_in_atom274); 
                     char_literal51_tree = 
                     (CommonTree)adaptor.create(char_literal51)
                     ;
@@ -1564,12 +1562,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 41 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:22:15: 'O'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:23:15: 'O'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal52=(Token)match(input,34,FOLLOW_34_in_atom269); 
+                    char_literal52=(Token)match(input,34,FOLLOW_34_in_atom278); 
                     char_literal52_tree = 
                     (CommonTree)adaptor.create(char_literal52)
                     ;
@@ -1579,12 +1577,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 42 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:22:21: 'P'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:23:21: 'P'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal53=(Token)match(input,35,FOLLOW_35_in_atom273); 
+                    char_literal53=(Token)match(input,35,FOLLOW_35_in_atom282); 
                     char_literal53_tree = 
                     (CommonTree)adaptor.create(char_literal53)
                     ;
@@ -1594,12 +1592,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 43 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:23:3: 'Q'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:24:3: 'Q'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal54=(Token)match(input,36,FOLLOW_36_in_atom279); 
+                    char_literal54=(Token)match(input,36,FOLLOW_36_in_atom288); 
                     char_literal54_tree = 
                     (CommonTree)adaptor.create(char_literal54)
                     ;
@@ -1609,12 +1607,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 44 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:23:9: 'R'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:24:9: 'R'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal55=(Token)match(input,37,FOLLOW_37_in_atom283); 
+                    char_literal55=(Token)match(input,37,FOLLOW_37_in_atom292); 
                     char_literal55_tree = 
                     (CommonTree)adaptor.create(char_literal55)
                     ;
@@ -1624,12 +1622,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 45 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:23:15: 'S'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:24:15: 'S'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal56=(Token)match(input,38,FOLLOW_38_in_atom287); 
+                    char_literal56=(Token)match(input,38,FOLLOW_38_in_atom296); 
                     char_literal56_tree = 
                     (CommonTree)adaptor.create(char_literal56)
                     ;
@@ -1639,12 +1637,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 46 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:23:21: 'T'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:24:21: 'T'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal57=(Token)match(input,39,FOLLOW_39_in_atom291); 
+                    char_literal57=(Token)match(input,39,FOLLOW_39_in_atom300); 
                     char_literal57_tree = 
                     (CommonTree)adaptor.create(char_literal57)
                     ;
@@ -1654,12 +1652,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 47 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:24:3: 'U'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:25:3: 'U'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal58=(Token)match(input,40,FOLLOW_40_in_atom297); 
+                    char_literal58=(Token)match(input,40,FOLLOW_40_in_atom306); 
                     char_literal58_tree = 
                     (CommonTree)adaptor.create(char_literal58)
                     ;
@@ -1669,12 +1667,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 48 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:24:9: 'V'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:25:9: 'V'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal59=(Token)match(input,41,FOLLOW_41_in_atom301); 
+                    char_literal59=(Token)match(input,41,FOLLOW_41_in_atom310); 
                     char_literal59_tree = 
                     (CommonTree)adaptor.create(char_literal59)
                     ;
@@ -1684,12 +1682,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 49 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:24:15: 'W'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:25:15: 'W'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal60=(Token)match(input,42,FOLLOW_42_in_atom305); 
+                    char_literal60=(Token)match(input,42,FOLLOW_42_in_atom314); 
                     char_literal60_tree = 
                     (CommonTree)adaptor.create(char_literal60)
                     ;
@@ -1699,12 +1697,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 50 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:24:21: 'X'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:25:21: 'X'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal61=(Token)match(input,43,FOLLOW_43_in_atom309); 
+                    char_literal61=(Token)match(input,43,FOLLOW_43_in_atom318); 
                     char_literal61_tree = 
                     (CommonTree)adaptor.create(char_literal61)
                     ;
@@ -1714,12 +1712,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 51 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:25:3: 'Y'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:26:3: 'Y'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal62=(Token)match(input,44,FOLLOW_44_in_atom315); 
+                    char_literal62=(Token)match(input,44,FOLLOW_44_in_atom324); 
                     char_literal62_tree = 
                     (CommonTree)adaptor.create(char_literal62)
                     ;
@@ -1729,12 +1727,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 52 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:25:9: 'Z'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:26:9: 'Z'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal63=(Token)match(input,45,FOLLOW_45_in_atom319); 
+                    char_literal63=(Token)match(input,45,FOLLOW_45_in_atom328); 
                     char_literal63_tree = 
                     (CommonTree)adaptor.create(char_literal63)
                     ;
@@ -1744,12 +1742,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 53 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:26:3: '0'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:27:3: '0'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal64=(Token)match(input,9,FOLLOW_9_in_atom325); 
+                    char_literal64=(Token)match(input,9,FOLLOW_9_in_atom334); 
                     char_literal64_tree = 
                     (CommonTree)adaptor.create(char_literal64)
                     ;
@@ -1759,12 +1757,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 54 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:26:9: '1'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:27:9: '1'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal65=(Token)match(input,10,FOLLOW_10_in_atom329); 
+                    char_literal65=(Token)match(input,10,FOLLOW_10_in_atom338); 
                     char_literal65_tree = 
                     (CommonTree)adaptor.create(char_literal65)
                     ;
@@ -1774,12 +1772,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 55 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:26:15: '2'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:27:15: '2'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal66=(Token)match(input,11,FOLLOW_11_in_atom333); 
+                    char_literal66=(Token)match(input,11,FOLLOW_11_in_atom342); 
                     char_literal66_tree = 
                     (CommonTree)adaptor.create(char_literal66)
                     ;
@@ -1789,12 +1787,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 56 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:26:21: '3'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:27:21: '3'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal67=(Token)match(input,12,FOLLOW_12_in_atom337); 
+                    char_literal67=(Token)match(input,12,FOLLOW_12_in_atom346); 
                     char_literal67_tree = 
                     (CommonTree)adaptor.create(char_literal67)
                     ;
@@ -1804,12 +1802,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 57 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:27:3: '4'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:28:3: '4'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal68=(Token)match(input,13,FOLLOW_13_in_atom343); 
+                    char_literal68=(Token)match(input,13,FOLLOW_13_in_atom352); 
                     char_literal68_tree = 
                     (CommonTree)adaptor.create(char_literal68)
                     ;
@@ -1819,12 +1817,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 58 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:27:9: '5'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:28:9: '5'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal69=(Token)match(input,14,FOLLOW_14_in_atom347); 
+                    char_literal69=(Token)match(input,14,FOLLOW_14_in_atom356); 
                     char_literal69_tree = 
                     (CommonTree)adaptor.create(char_literal69)
                     ;
@@ -1834,12 +1832,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 59 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:27:15: '6'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:28:15: '6'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal70=(Token)match(input,15,FOLLOW_15_in_atom351); 
+                    char_literal70=(Token)match(input,15,FOLLOW_15_in_atom360); 
                     char_literal70_tree = 
                     (CommonTree)adaptor.create(char_literal70)
                     ;
@@ -1849,12 +1847,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 60 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:27:21: '7'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:28:21: '7'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal71=(Token)match(input,16,FOLLOW_16_in_atom355); 
+                    char_literal71=(Token)match(input,16,FOLLOW_16_in_atom364); 
                     char_literal71_tree = 
                     (CommonTree)adaptor.create(char_literal71)
                     ;
@@ -1864,12 +1862,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 61 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:28:3: '8'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:29:3: '8'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal72=(Token)match(input,17,FOLLOW_17_in_atom361); 
+                    char_literal72=(Token)match(input,17,FOLLOW_17_in_atom370); 
                     char_literal72_tree = 
                     (CommonTree)adaptor.create(char_literal72)
                     ;
@@ -1879,12 +1877,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 62 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:28:9: '9'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:29:9: '9'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal73=(Token)match(input,18,FOLLOW_18_in_atom365); 
+                    char_literal73=(Token)match(input,18,FOLLOW_18_in_atom374); 
                     char_literal73_tree = 
                     (CommonTree)adaptor.create(char_literal73)
                     ;
@@ -1894,12 +1892,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 63 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:28:15: '.'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:29:15: '.'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal74=(Token)match(input,8,FOLLOW_8_in_atom369); 
+                    char_literal74=(Token)match(input,8,FOLLOW_8_in_atom378); 
                     char_literal74_tree = 
                     (CommonTree)adaptor.create(char_literal74)
                     ;
@@ -1909,31 +1907,21 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 64 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\tlen.g:28:21: '(' expr ')'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:29:21: '(' ! expr ')' !
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    char_literal75=(Token)match(input,4,FOLLOW_4_in_atom373); 
-                    char_literal75_tree = 
-                    (CommonTree)adaptor.create(char_literal75)
-                    ;
-                    adaptor.addChild(root_0, char_literal75_tree);
+                    char_literal75=(Token)match(input,4,FOLLOW_4_in_atom382); 
 
-
-                    pushFollow(FOLLOW_expr_in_atom374);
+                    pushFollow(FOLLOW_expr_in_atom384);
                     expr76=expr();
 
                     state._fsp--;
 
                     adaptor.addChild(root_0, expr76.getTree());
 
-                    char_literal77=(Token)match(input,5,FOLLOW_5_in_atom375); 
-                    char_literal77_tree = 
-                    (CommonTree)adaptor.create(char_literal77)
-                    ;
-                    adaptor.addChild(root_0, char_literal77_tree);
-
+                    char_literal77=(Token)match(input,5,FOLLOW_5_in_atom385); 
 
                     }
                     break;
@@ -1965,82 +1953,82 @@ public TreeAdaptor getTreeAdaptor() {
 
  
 
-    public static final BitSet FOLLOW_expr_in_s34 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_s36 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_dis_in_expr44 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000100L});
-    public static final BitSet FOLLOW_72_in_expr46 = new BitSet(new long[]{0xFFFFFFFFFFF7FF10L,0x00000000000000FFL});
-    public static final BitSet FOLLOW_dis_in_expr49 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000100L});
-    public static final BitSet FOLLOW_un_in_dis58 = new BitSet(new long[]{0xFFFFFFFFFFF7FF12L,0x00000000000000FFL});
-    public static final BitSet FOLLOW_dis_in_dis61 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_atom_in_un70 = new BitSet(new long[]{0x00000000000800C2L});
-    public static final BitSet FOLLOW_7_in_un72 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_6_in_un75 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_un78 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_atom88 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_atom92 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_atom96 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_atom100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_atom106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_atom110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_atom114 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_atom118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_atom124 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_atom128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_atom132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_atom136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_atom142 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_atom146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_atom150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_atom154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_62_in_atom160 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_atom164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_atom168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_atom172 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_atom178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_atom182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_atom186 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_atom190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_atom196 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_atom200 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_atom207 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_atom211 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_atom215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_atom219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_atom225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_atom229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_atom233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_atom237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_atom243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_atom247 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_atom251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_atom255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_atom261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_atom265 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_atom269 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_atom273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_atom279 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_atom283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_atom287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_atom291 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_atom297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_atom301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_atom305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_atom309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_atom315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_atom319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_9_in_atom325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_10_in_atom329 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_atom333 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_atom337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_atom343 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_atom347 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_atom351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_atom355 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_atom361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_atom365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_8_in_atom369 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_4_in_atom373 = new BitSet(new long[]{0xFFFFFFFFFFF7FF10L,0x00000000000000FFL});
-    public static final BitSet FOLLOW_expr_in_atom374 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_5_in_atom375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_s43 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_s45 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_dis_in_expr53 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000100L});
+    public static final BitSet FOLLOW_72_in_expr55 = new BitSet(new long[]{0xFFFFFFFFFFF7FF10L,0x00000000000000FFL});
+    public static final BitSet FOLLOW_dis_in_expr58 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000100L});
+    public static final BitSet FOLLOW_un_in_dis67 = new BitSet(new long[]{0xFFFFFFFFFFF7FF12L,0x00000000000000FFL});
+    public static final BitSet FOLLOW_dis_in_dis70 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_atom_in_un79 = new BitSet(new long[]{0x00000000000800C2L});
+    public static final BitSet FOLLOW_7_in_un81 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_6_in_un84 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_un87 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_atom97 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_atom101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_atom105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_atom109 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_atom115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_atom119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_atom123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_atom127 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_atom133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_atom137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_atom141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_atom145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_atom151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_atom155 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_atom159 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_atom163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_atom169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_atom173 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_atom177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_atom181 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_atom187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_atom191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_atom195 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_atom199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_atom205 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_atom209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_atom216 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_atom220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_atom224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_atom228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_atom234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_atom238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_atom242 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_atom246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_atom252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_atom256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_atom260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_atom264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_atom270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_atom274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_atom278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_atom282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_atom288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_atom292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_atom296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_atom300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_atom306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_atom310 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_atom314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_atom318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_atom324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_atom328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_9_in_atom334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_10_in_atom338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_atom342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_atom346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_atom352 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_atom356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_atom360 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_atom364 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_atom370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_atom374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_8_in_atom378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_4_in_atom382 = new BitSet(new long[]{0xFFFFFFFFFFF7FF10L,0x00000000000000FFL});
+    public static final BitSet FOLLOW_expr_in_atom384 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_5_in_atom385 = new BitSet(new long[]{0x0000000000000002L});
 
 }
