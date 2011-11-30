@@ -1,16 +1,17 @@
 grammar Tlen;
 
-options {
-    language=Java;
-    output=AST;
-    ASTLabelType=CommonTree; // type of $stat.tree ref etc...
-}
-
-s	:	expr EOF!;
-expr	:	dis('|'^ dis)*;
-dis	:	un^ dis?;
-un 	:	atom('+'^|'*'^|'?'^)?;
-atom	:	'a' | 'b' | 'c' | 'd' |
+s	 returns [AFND afnd] 
+:	expr EOF {afnd = $expr.afnd;};
+expr returns [AFND afnd]
+:	dis '|' expr2 = expr {afnd = AFND.paralelize($dis.afnd,$expr2.afnd);};
+dis	returns [AFND afnd]  
+:	un(dis2 = dis)? {afnd = AFND.serialize($un.afnd,$dis2.afnd);};
+un returns [AFND afnd]
+ 	:	atom( '+' {afnd = AFND.plusRepeat($atom.afnd);}|
+	        '*' {afnd = AFND.repeat($atom.afnd);}|
+	        '?' {afnd = AFND.optional($atom.afnd);})? ;
+atom returns [AFND afnd]
+  :('a' | 'b' | 'c' | 'd' |
 		'e' | 'f' | 'g' | 'h' |
 		'i' | 'j' | 'k' | 'l' |
 		'm' | 'n' | 'o' | 'p' |
@@ -26,6 +27,8 @@ atom	:	'a' | 'b' | 'c' | 'd' |
 		'Y' | 'Z' |
 		'0' | '1' | '2' | '3' |
 		'4' | '5' | '6' | '7' |
-		'8' | '9' | '.' | '('!expr')'!;
+		'8' | '9' | '.' ) {retval.afnd = AFND.simple($atom.text);}
+		
+		| '('expr')'{retval.afnd = $expr.afnd;};
 
 
