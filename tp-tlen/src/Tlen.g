@@ -3,7 +3,7 @@ grammar Tlen;
 s	 returns [AFND afnd] 
 :	expr EOF {afnd = $expr.afnd;};
 expr returns [AFND afnd]
-:	dis '|' expr2 = expr {afnd = AFND.paralelize($dis.afnd,$expr2.afnd);};
+:	dis ('|' expr2 = expr)? {afnd = AFND.paralelize($dis.afnd,$expr2.afnd);};
 dis	returns [AFND afnd]  
 :	un(dis2 = dis)? {afnd = AFND.serialize($un.afnd,$dis2.afnd);};
 un returns [AFND afnd]
