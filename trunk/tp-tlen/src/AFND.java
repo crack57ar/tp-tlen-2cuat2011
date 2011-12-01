@@ -14,7 +14,7 @@ public class AFND extends AFD {
 	private HashSet<Delta> deltas= new HashSet<Delta>();
 	private static HashSet<String> acciones= new HashSet<String>();
 	
-	public AFND(int estadoInicial, HashSet estadosFinales, HashSet<Delta> deltas) {
+	public AFND(int estadoInicial, HashSet<Integer> estadosFinales, HashSet<Delta> deltas) {
 		super(estadoInicial, estadosFinales, null);
 		this.deltas=deltas;
 		calcularAcciones();
@@ -42,7 +42,7 @@ public class AFND extends AFD {
 	}
 
 	public void setAcciones(HashSet<String> acciones) {
-		this.acciones = acciones;
+		AFND.acciones = acciones;
 	}
 
 	/**
@@ -54,7 +54,7 @@ public class AFND extends AFD {
 
 		final AFND copiaA2 = a2;
 		copiaA2.transformarEstados(obtenerMaximo(a1, a2));
-		HashSet nuevosFinales = copiaA2.getEstadosFinales();
+		HashSet<Integer> nuevosFinales = copiaA2.getEstadosFinales();
 
 		final HashSet<Delta> nuevosDeltas = new HashSet<Delta>(); 
 		nuevosDeltas.addAll(a1.getDeltas());
@@ -85,7 +85,7 @@ public class AFND extends AFD {
 			}
 		});
 
-		HashSet nuevosFinales = a.getEstadosFinales();
+		HashSet<Integer> nuevosFinales = a.getEstadosFinales();
 		nuevosFinales.add(a.getEstadoInicial());
 
 		return new AFND(nuevoInicial, nuevosFinales, nuevosDeltas);
@@ -97,7 +97,7 @@ public class AFND extends AFD {
 	public static AFND plusRepeat(AFND a) {
 		final int nuevoInicial = a.getEstadoInicial();
 		
-		HashSet nuevosFinales = a.getEstadosFinales();
+		HashSet<Integer> nuevosFinales = a.getEstadosFinales();
 
 		final HashSet<Delta> nuevosDeltas = new HashSet<Delta>(); 
 		nuevosDeltas.addAll(a.getDeltas());
@@ -117,7 +117,7 @@ public class AFND extends AFD {
 	public static AFND optional(AFND a) {
 		final int nuevoInicial = a.getEstadoInicial();
 		
-		HashSet nuevosFinales = a.getEstadosFinales();
+		HashSet<Integer> nuevosFinales = a.getEstadosFinales();
 		nuevosFinales.add(a.getEstadoInicial());
 
 		final HashSet<Delta> nuevosDeltas = new HashSet<Delta>(); 
@@ -139,10 +139,10 @@ public class AFND extends AFD {
 
 	public static Collection<String> primerosPasos(final AFND a) {
 		final Collection<String> nuevosEstados = new HashSet<String>();
-		Collection estadosIniciales = new HashSet();
+		Collection<Integer> estadosIniciales = new HashSet<Integer>();
 		estadosIniciales.add(a.getEstadoInicial());
 		
-		final Collection estadosClausura = a.clausuraLambda(estadosIniciales);
+		final Collection<Integer> estadosClausura = a.clausuraLambda(estadosIniciales);
 		nuevosEstados.add(concatenarEstados(estadosClausura));
 
 		CollectionUtils.forAllDo(acciones, new Closure() {
@@ -167,9 +167,9 @@ public class AFND extends AFD {
 	 * @param estados
 	 * @return
 	 */
-	public static String concatenarEstados(Collection estados){
+	public static String concatenarEstados(Collection<Integer> estados){
 		String estadoConcatenado=""; 
-		Iterator iterEstados = estados.iterator();
+		Iterator<Integer> iterEstados = estados.iterator();
 		while(iterEstados.hasNext()){
 			estadoConcatenado += "q"+iterEstados.next();
 		}
@@ -177,11 +177,11 @@ public class AFND extends AFD {
 	}
 	
 
-	public Collection clausuraLambda(Collection estados){
+	public Collection<Integer> clausuraLambda(Collection<Integer> estados){
 		return obtenerEstados(estados, LAMBDA);
 	}
 	
-	public Collection mover(Collection estados, final String accion){
+	public Collection<Integer> mover(Collection<Integer> estados, final String accion){
 		return clausuraLambda(obtenerEstados(estados, accion));
 	}
 	
@@ -193,9 +193,9 @@ public class AFND extends AFD {
 	 * @param accion
 	 * @return
 	 */
-	public Collection obtenerEstados(Collection estados, final String accion){
-		final Collection nuevosDeltas = new HashSet();
-		final Collection nuevosEstados = new HashSet();
+	public Collection<Integer> obtenerEstados(Collection<Integer> estados, final String accion){
+		final Collection<Integer> nuevosDeltas = new HashSet<Integer>();
+		final Collection<Integer> nuevosEstados = new HashSet<Integer>();
 
 		CollectionUtils.forAllDo(estados, new Closure() {
 			@Override
@@ -251,7 +251,7 @@ public class AFND extends AFD {
 
 		AFND copiaA2 = a2;
 		copiaA2.transformarEstados(nuevoInicial);
-		HashSet nuevosFinales = new HashSet(); 
+		HashSet<Integer> nuevosFinales = new HashSet<Integer>(); 
 		nuevosFinales.addAll(a1.getEstadosFinales());
 		nuevosFinales.addAll(copiaA2.getEstadosFinales());
 
@@ -298,7 +298,7 @@ public class AFND extends AFD {
 		this.setEstadoInicial(constante + this.getEstadoInicial());
 
 		// cambioEstados finales
-		final HashSet nuevosFinales = new HashSet();
+		final HashSet<Integer> nuevosFinales = new HashSet<Integer>();
 		CollectionUtils.forAllDo(this.getEstadosFinales(), new Closure(){
 			@Override
 			public void execute(Object arg0) {
