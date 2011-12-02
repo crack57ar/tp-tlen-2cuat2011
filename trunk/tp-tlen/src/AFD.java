@@ -11,14 +11,14 @@ public class AFD {
 
 	private int _estadoInicial;
 	private HashSet<Integer> _estadosFinales;
-	private Hashtable<Integer, Hashtable<Character, Object>> _transiciones;
+	private Hashtable<Integer, Hashtable<Character, Collection<Integer>>> _transiciones;
 	public static final String LAMBDA = "@";
 
 	// sirve para saber en què estado estamos cuando se lee una cadena...
 	private int _estadoActual;
 
 	public AFD(int estadoInicial, HashSet<Integer> estadosFinales,
-			Hashtable<Integer, Hashtable<Character, Object>> transiciones) {
+			Hashtable<Integer, Hashtable<Character, Collection<Integer>>> transiciones) {
 		_estadoInicial = estadoInicial;
 		_estadosFinales = estadosFinales;
 		_transiciones = transiciones;
@@ -37,7 +37,7 @@ public class AFD {
 		_estadosFinales = estadosFinales;
 	}
 
-	public void setTransicion(Hashtable<Integer, Hashtable<Character, Object>> transicion) {
+	public void setTransicion(Hashtable<Integer, Hashtable<Character, Collection<Integer>>> transicion) {
 		_transiciones = transicion;
 	}
 
@@ -53,7 +53,7 @@ public class AFD {
 		_estadoActual = value;
 	}
 
-	public Hashtable<Integer, Hashtable<Character, Object>> getTransiciones() {
+	public Hashtable<Integer, Hashtable<Character, Collection<Integer>>> getTransiciones() {
 		return _transiciones;
 	}
 
@@ -69,15 +69,13 @@ public class AFD {
 
 		int estAux;
 
-		Hashtable<Character, Object> SimbolosYSusEstados;
-		SimbolosYSusEstados = (this.getTransiciones().get(this
-				.EstadoActual()));
+		Hashtable<Character, Collection<Integer>> SimbolosYSusEstados = (this.getTransiciones().get(this.EstadoActual()));
 
 		// si es un estado trampa....
 		if (!SimbolosYSusEstados.containsKey(simboloAlbabeto)) {
 			return false;
 		} else {
-			estAux = (Integer) (SimbolosYSusEstados.get(simboloAlbabeto));
+			estAux = SimbolosYSusEstados.get(simboloAlbabeto).iterator().next();
 			this.setEstadoActual(estAux);
 
 			return true;
@@ -137,17 +135,21 @@ public class AFD {
 	public void AgregarATransicion(int estadoOrigen, char simbolo,
 			int estadoDestino) {
 
-		Hashtable<Character, Object> simbolosYEstados;
+		Hashtable<Character, Collection<Integer>> simbolosYEstados;
 
 		if (!this.getTransiciones().containsKey(estadoOrigen)) {
-			simbolosYEstados = new Hashtable<Character, Object>();
-			simbolosYEstados.put(simbolo, estadoDestino);
+			simbolosYEstados = new Hashtable<Character, Collection<Integer>>();
+			Collection<Integer> estadoDestinoConj = new HashSet<Integer>();
+			estadoDestinoConj.add(estadoDestino);
+			simbolosYEstados.put(simbolo, estadoDestinoConj);
 			this.getTransiciones().put(estadoOrigen, simbolosYEstados);
 		} else {
 			simbolosYEstados = this.getTransiciones().get(
 					estadoOrigen);
 			if (!simbolosYEstados.containsKey(simbolo)) {
-				simbolosYEstados.put(simbolo, estadoDestino);
+				Collection<Integer> estadoDestinoConj = new HashSet<Integer>();
+				estadoDestinoConj.add(estadoDestino);
+				simbolosYEstados.put(simbolo, estadoDestinoConj);
 				this.getTransiciones().put(estadoOrigen, simbolosYEstados);
 			}
 
@@ -159,10 +161,10 @@ public class AFD {
 	public void AgregarATransicion(int estadoOrigen, char simbolo,
 			Collection<Integer> estadosDestino) {
 
-		Hashtable<Character, Object> simbolosYEstados;
+		Hashtable<Character, Collection<Integer>> simbolosYEstados;
 
 		if (!this.getTransiciones().containsKey(estadoOrigen)) {
-			simbolosYEstados = new Hashtable<Character, Object>();
+			simbolosYEstados = new Hashtable<Character, Collection<Integer>>();
 			simbolosYEstados.put(simbolo, estadosDestino);
 			this.getTransiciones().put(estadoOrigen, simbolosYEstados);
 		} else {
@@ -197,7 +199,7 @@ public class AFD {
 
 	public Collection<Integer> getEstados() {
 		final Collection<Integer> todosLosEstados = new HashSet<Integer>();
-		Collection<Hashtable<Character, Object>> todosLosDicc = getTransiciones().values();
+		Collection<Hashtable<Character, Collection<Integer>>> todosLosDicc = getTransiciones().values();
 
 		CollectionUtils.forAllDo(todosLosDicc, new Closure() {
 			@Override
