@@ -1,7 +1,4 @@
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,7 +6,6 @@ import java.io.IOException;
 import org.antlr.runtime.ANTLRStringStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
-import org.antlr.runtime.tree.CommonTree;
 
 
 public class Main {
@@ -18,8 +14,8 @@ public class Main {
 	 * @param args
 	 */
 	
-	static String input = null;
-	static String ER = "((a)*(b)|cd)";
+	static String input = "c:/testFile.txt";
+	static String ER = "(a(b|c))*";
 	
 	
 	/* podriamos usar opciones de linea de comandos, 

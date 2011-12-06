@@ -3,13 +3,14 @@ grammar Tlen;
 s	 returns [AFND afnd] 
 :	expr EOF {afnd = $expr.afnd;};
 expr returns [AFND afnd]
-:	dis ('|' expr2 = expr)? {afnd = AFND.paralelize($dis.afnd,$expr2.afnd);};
+:	dis {afnd = $dis.afnd;} ('|' expr2 = expr {afnd = AFND.paralelize($dis.afnd,$expr2.afnd);})? ;
 dis	returns [AFND afnd]  
-:	un(dis2 = dis)? {afnd = AFND.serialize($un.afnd,$dis2.afnd);};
+:	un {afnd = $un.afnd;}(dis2 = dis {afnd = AFND.serialize($un.afnd,$dis2.afnd);})? ;
 un returns [AFND afnd]
- 	:	atom( '+' {afnd = AFND.plusRepeat($atom.afnd);}|
-	        '*' {afnd = AFND.repeat($atom.afnd);}|
-	        '?' {afnd = AFND.optional($atom.afnd);})? ;
+ 	:	atom {afnd = $atom.afnd;}
+ 	 ( '+' {afnd = AFND.plusRepeat($atom.afnd);}|
+	   '*' {afnd = AFND.repeat($atom.afnd);}|
+	   '?' {afnd = AFND.optional($atom.afnd);})? ;
 atom returns [AFND afnd]
   :('a' | 'b' | 'c' | 'd' |
 		'e' | 'f' | 'g' | 'h' |
