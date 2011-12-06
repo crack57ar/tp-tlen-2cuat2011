@@ -22,21 +22,32 @@ public class Main {
 	 * pero la catedra quiere que el primer parametro sea la ER y el segundo el path del archivo. */ 
 	 
 	public static boolean parseOptions(String[] args){
-		if(args.length == 3){
-			ER = args[1];
-			input = args[2];			
+		if(args.length == 2){
+			ER = args[0];
+			input = args[1];
+			return true;
 		}
+		printHelp();
 		return false;
 	}
 	
 	public static void printHelp(){
+		String help =
+		"Modo de uso:\n"+
+		"java -jar tlen.jar \"[regex]\" \"[path de archivo]\"\n"+
+		"regex : expresion regular a ser buscada en el archivo.\n"+
+		"path de archivo : path absoluto del archivo a ser examinado.\n";
 		
+		System.out.println(help);
 	}
 	
 	public static void main(String[] args) {
 		
-		try {
-			parseOptions(args);
+		try {			
+			if(!parseOptions(args)){
+				printHelp();
+				return;
+			}
 			TlenLexer lex = new TlenLexer(new ANTLRStringStream(ER));
 			CommonTokenStream tokens = new CommonTokenStream(lex);
 			TlenParser parser = new TlenParser(tokens);
@@ -47,7 +58,7 @@ public class Main {
 			/** lo hago deterministico **/
 			AFD afd = AFND.determinize(afnd);
 			
-			/** obtengo el archivo y lo recorro**/
+			/** obtengo el archivo y lo recorro **/
 			BufferedReader reader;
 			try {
 				reader = new BufferedReader(new FileReader(input));
