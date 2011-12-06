@@ -150,11 +150,13 @@ public class AFND extends AFD {
 				String accion = (String) iterAcciones.next();
 				if(!accion.equals(LAMBDA)){
 					Collection posibleEstadoNuevo = new HashSet();
-					posibleEstadoNuevo = a.mover(estadoActual, accion);
-					if(!nuevosEstados.contains(posibleEstadoNuevo)){
-						nuevosEstados.add(posibleEstadoNuevo);
+					posibleEstadoNuevo = a.clausuraLambda(a.mover(estadoActual, accion));
+					if(!posibleEstadoNuevo.isEmpty()){
+						if(!nuevosEstados.contains(posibleEstadoNuevo)){
+							nuevosEstados.add(posibleEstadoNuevo);
+						}
+						simbolosNuevos.put(accion.charAt(0),concatenarEstados(posibleEstadoNuevo));
 					}
-				    simbolosNuevos.put(accion.charAt(0),concatenarEstados(posibleEstadoNuevo));
 				}
 			}
 
