@@ -26,8 +26,7 @@ public class Main {
 			ER = args[0];
 			input = args[1];
 			return true;
-		}
-		printHelp();
+		}		
 		return false;
 	}
 	
