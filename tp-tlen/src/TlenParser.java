@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g 2011-12-01 11:46:53
+// $ANTLR 3.4 C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g 2011-12-06 11:41:52
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -163,7 +163,9 @@ public class TlenParser extends Parser {
             state._fsp--;
 
 
-            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:6:7: ( '|' expr2= expr )?
+            afnd = dis2;
+
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:6:27: ( '|' expr2= expr )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -172,23 +174,23 @@ public class TlenParser extends Parser {
             }
             switch (alt1) {
                 case 1 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:6:8: '|' expr2= expr
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:6:28: '|' expr2= expr
                     {
-                    match(input,72,FOLLOW_72_in_expr34); 
+                    match(input,72,FOLLOW_72_in_expr36); 
 
-                    pushFollow(FOLLOW_expr_in_expr40);
+                    pushFollow(FOLLOW_expr_in_expr42);
                     expr2=expr();
 
                     state._fsp--;
 
+
+                    afnd = AFND.paralelize(dis2,expr2);
 
                     }
                     break;
 
             }
 
-
-            afnd = AFND.paralelize(dis2,expr2);
 
             }
 
@@ -222,13 +224,15 @@ public class TlenParser extends Parser {
             // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:8:3: ( un (dis2= dis )? )
             // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:8:3: un (dis2= dis )?
             {
-            pushFollow(FOLLOW_un_in_dis57);
+            pushFollow(FOLLOW_un_in_dis60);
             un3=un();
 
             state._fsp--;
 
 
-            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:8:5: (dis2= dis )?
+            afnd = un3;
+
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:8:24: (dis2= dis )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -237,21 +241,21 @@ public class TlenParser extends Parser {
             }
             switch (alt2) {
                 case 1 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:8:6: dis2= dis
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:8:25: dis2= dis
                     {
-                    pushFollow(FOLLOW_dis_in_dis63);
+                    pushFollow(FOLLOW_dis_in_dis68);
                     dis2=dis();
 
                     state._fsp--;
 
+
+                    afnd = AFND.serialize(un3,dis2);
 
                     }
                     break;
 
             }
 
-
-            afnd = AFND.serialize(un3,dis2);
 
             }
 
@@ -283,13 +287,15 @@ public class TlenParser extends Parser {
             // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:10:3: ( atom ( '+' | '*' | '?' )? )
             // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:10:5: atom ( '+' | '*' | '?' )?
             {
-            pushFollow(FOLLOW_atom_in_un80);
+            pushFollow(FOLLOW_atom_in_un86);
             atom4=atom();
 
             state._fsp--;
 
 
-            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:10:9: ( '+' | '*' | '?' )?
+            afnd = (atom4!=null?atom4.afnd:null);
+
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:11:4: ( '+' | '*' | '?' )?
             int alt3=4;
             switch ( input.LA(1) ) {
                 case 7:
@@ -311,27 +317,27 @@ public class TlenParser extends Parser {
 
             switch (alt3) {
                 case 1 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:10:11: '+'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:11:6: '+'
                     {
-                    match(input,7,FOLLOW_7_in_un83); 
+                    match(input,7,FOLLOW_7_in_un95); 
 
                     afnd = AFND.plusRepeat((atom4!=null?atom4.afnd:null));
 
                     }
                     break;
                 case 2 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:11:10: '*'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:12:5: '*'
                     {
-                    match(input,6,FOLLOW_6_in_un97); 
+                    match(input,6,FOLLOW_6_in_un104); 
 
                     afnd = AFND.repeat((atom4!=null?atom4.afnd:null));
 
                     }
                     break;
                 case 3 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:12:10: '?'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:13:5: '?'
                     {
-                    match(input,19,FOLLOW_19_in_un111); 
+                    match(input,19,FOLLOW_19_in_un113); 
 
                     afnd = AFND.optional((atom4!=null?atom4.afnd:null));
 
@@ -363,7 +369,7 @@ public class TlenParser extends Parser {
 
 
     // $ANTLR start "atom"
-    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:13:1: atom returns [AFND afnd] : ( ( 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '.' ) | '(' expr ')' );
+    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:14:1: atom returns [AFND afnd] : ( ( 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '.' ) | '(' expr ')' );
     public final TlenParser.atom_return atom() throws RecognitionException {
         TlenParser.atom_return retval = new TlenParser.atom_return();
         retval.start = input.LT(1);
@@ -373,7 +379,7 @@ public class TlenParser extends Parser {
 
 
         try {
-            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:14:3: ( ( 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '.' ) | '(' expr ')' )
+            // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:15:3: ( ( 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '.' ) | '(' expr ')' )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -392,7 +398,7 @@ public class TlenParser extends Parser {
             }
             switch (alt4) {
                 case 1 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:14:4: ( 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '.' )
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:15:4: ( 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '.' )
                     {
                     if ( (input.LA(1) >= 8 && input.LA(1) <= 18)||(input.LA(1) >= 20 && input.LA(1) <= 71) ) {
                         input.consume();
@@ -409,17 +415,17 @@ public class TlenParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:32:5: '(' expr ')'
+                    // C:\\Documents and Settings\\psm\\Mis documentos\\facultad\\teoria de lenguaje\\tp\\tp-tlen\\src\\Tlen.g:33:5: '(' expr ')'
                     {
-                    match(input,4,FOLLOW_4_in_atom423); 
+                    match(input,4,FOLLOW_4_in_atom425); 
 
-                    pushFollow(FOLLOW_expr_in_atom424);
+                    pushFollow(FOLLOW_expr_in_atom426);
                     expr5=expr();
 
                     state._fsp--;
 
 
-                    match(input,5,FOLLOW_5_in_atom425); 
+                    match(input,5,FOLLOW_5_in_atom427); 
 
                     retval.afnd = expr5;
 
@@ -451,17 +457,17 @@ public class TlenParser extends Parser {
     public static final BitSet FOLLOW_expr_in_s16 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_s18 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_dis_in_expr31 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000100L});
-    public static final BitSet FOLLOW_72_in_expr34 = new BitSet(new long[]{0xFFFFFFFFFFF7FF10L,0x00000000000000FFL});
-    public static final BitSet FOLLOW_expr_in_expr40 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_un_in_dis57 = new BitSet(new long[]{0xFFFFFFFFFFF7FF12L,0x00000000000000FFL});
-    public static final BitSet FOLLOW_dis_in_dis63 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_atom_in_un80 = new BitSet(new long[]{0x00000000000800C2L});
-    public static final BitSet FOLLOW_7_in_un83 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_6_in_un97 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_un111 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_atom128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_4_in_atom423 = new BitSet(new long[]{0xFFFFFFFFFFF7FF10L,0x00000000000000FFL});
-    public static final BitSet FOLLOW_expr_in_atom424 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_5_in_atom425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_expr36 = new BitSet(new long[]{0xFFFFFFFFFFF7FF10L,0x00000000000000FFL});
+    public static final BitSet FOLLOW_expr_in_expr42 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_un_in_dis60 = new BitSet(new long[]{0xFFFFFFFFFFF7FF12L,0x00000000000000FFL});
+    public static final BitSet FOLLOW_dis_in_dis68 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_atom_in_un86 = new BitSet(new long[]{0x00000000000800C2L});
+    public static final BitSet FOLLOW_7_in_un95 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_6_in_un104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_un113 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_atom130 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_4_in_atom425 = new BitSet(new long[]{0xFFFFFFFFFFF7FF10L,0x00000000000000FFL});
+    public static final BitSet FOLLOW_expr_in_atom426 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_5_in_atom427 = new BitSet(new long[]{0x0000000000000002L});
 
 }

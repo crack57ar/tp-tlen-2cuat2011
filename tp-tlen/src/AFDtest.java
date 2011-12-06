@@ -1,6 +1,3 @@
-
-
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Hashtable;
 
@@ -14,42 +11,60 @@ public class AFDtest extends TestCase {
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
-        Hashtable<Integer, Hashtable<Character, Collection<Integer>>> transicionesAestrella= new Hashtable<Integer, Hashtable<Character, Collection<Integer>>>();
-        Hashtable<Character, Collection<Integer>> simbolosAestrella= new Hashtable<Character, Collection<Integer>>();
-        HashSet<Integer> estadosFinalesAestrella= new HashSet<Integer>();
+        Hashtable transicionesAestrella= new Hashtable();
+        Hashtable simbolosAestrella= new Hashtable();
+        HashSet estadosFinalesAestrella= new HashSet();
 
-        
-  
-        
-        
+        simbolosAestrella.put('a',0);
+        transicionesAestrella.put(0, simbolosAestrella);
         estadosFinalesAestrella.add(0);
         int estadoInicialAestrella = 0;
-        automaReconoceMuchasAes = new AFD(estadoInicialAestrella,estadosFinalesAestrella,null);
-        automaReconoceMuchasAes.AgregarATransicion(0, 'a', 0);
+        automaReconoceMuchasAes = new AFD(estadoInicialAestrella,estadosFinalesAestrella,transicionesAestrella);
 //        System.out.println("AUTOMA CON SOLO a`s : ");
 
         //Automata que reconoce cantidad par de ceros e impar de unos
-        HashSet<Integer> estadosFinales1y0 = new HashSet<Integer>();
+        Hashtable transiciones1y0 = new Hashtable();
+        Hashtable simbolos1y0= new Hashtable();
+        HashSet estadosFinales1y0 = new HashSet();
+
+        //Estando el el estado 0
+        //leo el simbolo y voy al estado siguiente
+        simbolos1y0.put('0',1);
+        simbolos1y0.put('1',2);
+
+        //estado 0
+        transiciones1y0.put(0, simbolos1y0);
+        
+        //Estando el estado 1
+        Hashtable simbolosYSusEstados1= new Hashtable();
+        simbolosYSusEstados1.put('0',0);
+        simbolosYSusEstados1.put('1',3);
+
+        //estado 1
+        transiciones1y0.put(1, simbolosYSusEstados1);
+
+        //Estando en el estado 2
+        Hashtable simbolosYSusEstados2= new Hashtable();
+        simbolosYSusEstados2.put('0',3);
+        simbolosYSusEstados2.put('1',0);
+
+        //estado 2
+        transiciones1y0.put(2, simbolosYSusEstados2);
+
+        //Estando el estado 3
+        Hashtable simbolosYSusEstados3= new Hashtable();
+        simbolosYSusEstados3.put('0',2);
+        simbolosYSusEstados3.put('1',1);
+
+        //estado 3
+        transiciones1y0.put(3, simbolosYSusEstados3);
 
         int estadosIniciales = 0;
 
         //estados finales
         estadosFinales1y0.add(2);
 
-        automaReconoceParOsImpar1s = new AFD(estadosIniciales,estadosFinales1y0,null);        
-        //estado 0
-        automaReconoceParOsImpar1s.AgregarATransicion(0, '0', 1);
-        automaReconoceParOsImpar1s.AgregarATransicion(0, '1', 2);        
-        //estado 1
-        automaReconoceParOsImpar1s.AgregarATransicion(1, '0', 0);
-        automaReconoceParOsImpar1s.AgregarATransicion(1, '1', 3);        
-        //estado 2
-        automaReconoceParOsImpar1s.AgregarATransicion(2, '0', 3);
-        automaReconoceParOsImpar1s.AgregarATransicion(2, '1', 0);        
-        //estado 3
-        automaReconoceParOsImpar1s.AgregarATransicion(3, '0', 2);
-        automaReconoceParOsImpar1s.AgregarATransicion(3, '1', 1);
-
+        automaReconoceParOsImpar1s = new AFD(estadosIniciales,estadosFinales1y0,transiciones1y0);
 	
 	}
 

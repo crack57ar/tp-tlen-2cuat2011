@@ -1,4 +1,3 @@
-
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Hashtable;
@@ -10,15 +9,15 @@ import org.apache.commons.collections.CollectionUtils;
 public class AFD {
 
 	private int _estadoInicial;
-	private HashSet<Integer> _estadosFinales;
-	private Hashtable<Integer, Hashtable<Character, Collection<Integer>>> _transiciones;
+	private HashSet _estadosFinales;
+	private Hashtable _transiciones;
 	public static final String LAMBDA = "@";
 
 	// sirve para saber en què estado estamos cuando se lee una cadena...
 	private int _estadoActual;
 
-	public AFD(int estadoInicial, HashSet<Integer> estadosFinales,
-			Hashtable<Integer, Hashtable<Character, Collection<Integer>>> transiciones) {
+	public AFD(int estadoInicial, HashSet estadosFinales,
+			Hashtable transiciones) {
 		_estadoInicial = estadoInicial;
 		_estadosFinales = estadosFinales;
 		_transiciones = transiciones;
@@ -29,15 +28,15 @@ public class AFD {
 		_estadoInicial = estadoInicial;
 	}
 
-	public HashSet<Integer> getEstadosFinales() {
+	public HashSet getEstadosFinales() {
 		return _estadosFinales;
 	}
 
-	public void setEstadosFinales(HashSet<Integer> estadosFinales) {
+	public void setEstadosFinales(HashSet estadosFinales) {
 		_estadosFinales = estadosFinales;
 	}
 
-	public void setTransicion(Hashtable<Integer, Hashtable<Character, Collection<Integer>>> transicion) {
+	public void setTransicion(Hashtable transicion) {
 		_transiciones = transicion;
 	}
 
@@ -53,7 +52,7 @@ public class AFD {
 		_estadoActual = value;
 	}
 
-	public Hashtable<Integer, Hashtable<Character, Collection<Integer>>> getTransiciones() {
+	public Hashtable getTransiciones() {
 		return _transiciones;
 	}
 
@@ -69,13 +68,15 @@ public class AFD {
 
 		int estAux;
 
-		Hashtable<Character, Collection<Integer>> SimbolosYSusEstados = (this.getTransiciones().get(this.EstadoActual()));
+		Hashtable SimbolosYSusEstados;
+		SimbolosYSusEstados = (Hashtable) (this.getTransiciones().get(this
+				.EstadoActual()));
 
 		// si es un estado trampa....
 		if (!SimbolosYSusEstados.containsKey(simboloAlbabeto)) {
 			return false;
 		} else {
-			estAux = SimbolosYSusEstados.get(simboloAlbabeto).iterator().next();
+			estAux = (Integer) (SimbolosYSusEstados.get(simboloAlbabeto));
 			this.setEstadoActual(estAux);
 
 			return true;
@@ -135,21 +136,17 @@ public class AFD {
 	public void AgregarATransicion(int estadoOrigen, char simbolo,
 			int estadoDestino) {
 
-		Hashtable<Character, Collection<Integer>> simbolosYEstados;
+		Hashtable simbolosYEstados;
 
 		if (!this.getTransiciones().containsKey(estadoOrigen)) {
-			simbolosYEstados = new Hashtable<Character, Collection<Integer>>();
-			Collection<Integer> estadoDestinoConj = new HashSet<Integer>();
-			estadoDestinoConj.add(estadoDestino);
-			simbolosYEstados.put(simbolo, estadoDestinoConj);
+			simbolosYEstados = new Hashtable();
+			simbolosYEstados.put(simbolo, estadoDestino);
 			this.getTransiciones().put(estadoOrigen, simbolosYEstados);
 		} else {
-			simbolosYEstados = this.getTransiciones().get(
+			simbolosYEstados = (Hashtable) this.getTransiciones().get(
 					estadoOrigen);
 			if (!simbolosYEstados.containsKey(simbolo)) {
-				Collection<Integer> estadoDestinoConj = new HashSet<Integer>();
-				estadoDestinoConj.add(estadoDestino);
-				simbolosYEstados.put(simbolo, estadoDestinoConj);
+				simbolosYEstados.put(simbolo, estadoDestino);
 				this.getTransiciones().put(estadoOrigen, simbolosYEstados);
 			}
 
@@ -159,16 +156,16 @@ public class AFD {
 
 	// para automa finito no determinìstico
 	public void AgregarATransicion(int estadoOrigen, char simbolo,
-			Collection<Integer> estadosDestino) {
+			Collection estadosDestino) {
 
-		Hashtable<Character, Collection<Integer>> simbolosYEstados;
+		Hashtable simbolosYEstados;
 
 		if (!this.getTransiciones().containsKey(estadoOrigen)) {
-			simbolosYEstados = new Hashtable<Character, Collection<Integer>>();
+			simbolosYEstados = new Hashtable();
 			simbolosYEstados.put(simbolo, estadosDestino);
 			this.getTransiciones().put(estadoOrigen, simbolosYEstados);
 		} else {
-			simbolosYEstados = this.getTransiciones().get(
+			simbolosYEstados = (Hashtable) this.getTransiciones().get(
 					estadoOrigen);
 			if (!simbolosYEstados.containsKey(simbolo)) {
 				simbolosYEstados.put(simbolo, estadosDestino);
@@ -183,28 +180,28 @@ public class AFD {
 	// automata***********////
 	// para AFD
 	public int ProximoEstado(int estadoOrigen, char simbolo) {
-		Hashtable<?, ?> SimbolosYSusEstados;
-		SimbolosYSusEstados = (this.getTransiciones()
+		Hashtable SimbolosYSusEstados;
+		SimbolosYSusEstados = (Hashtable) (this.getTransiciones()
 				.get(estadoOrigen));
 		return (Integer) (SimbolosYSusEstados.get(simbolo));
 	}
 
 	// para AFND
-	public Collection<?> ProximoEstados(int estadoOrigen, char simbolo) {
-		Hashtable<?, ?> SimbolosYSusEstados;
-		SimbolosYSusEstados = (this.getTransiciones()
+	public Collection ProximoEstados(int estadoOrigen, char simbolo) {
+		Hashtable SimbolosYSusEstados;
+		SimbolosYSusEstados = (Hashtable) (this.getTransiciones()
 				.get(estadoOrigen));
-		return (Collection<?>) (SimbolosYSusEstados.get(simbolo));
+		return (Collection) (SimbolosYSusEstados.get(simbolo));
 	}
 
-	public Collection<Integer> getEstados() {
-		final Collection<Integer> todosLosEstados = new HashSet<Integer>();
-		Collection<Hashtable<Character, Collection<Integer>>> todosLosDicc = getTransiciones().values();
+	public Collection getEstados() {
+		final Collection todosLosEstados = new HashSet();
+		Collection todosLosDicc = getTransiciones().values();
 
 		CollectionUtils.forAllDo(todosLosDicc, new Closure() {
 			@Override
 			public void execute(Object arg0) {
-				Collection<?> valores = ((Hashtable<?, ?>) arg0).values();
+				Collection valores = ((Hashtable) arg0).values();
 				// todosLosEstados.addAll(valores);
 				CollectionUtils.addAll(todosLosEstados, valores.iterator());
 			}
@@ -220,7 +217,7 @@ public class AFD {
 	 */
 	public int getEstadoMaximo() {
 		int masGrande = 0;
-		Iterator<Integer> iterEstados = getEstados().iterator();
+		Iterator iterEstados = getEstados().iterator();
 		while (iterEstados.hasNext()) {
 			Object valor = iterEstados.next();
 
@@ -230,5 +227,31 @@ public class AFD {
 		}
 
 		return masGrande;
+	}
+
+	public void mostrar() {
+		System.out.println("AFD inicial*******************");
+		System.out.println(getEstadoInicial());
+		System.out.println(getEstadosFinales());
+		System.out.println("AFD origenes*******************");
+		System.out.println(getTransiciones().keySet());
+		System.out.println("AFD acciones*******************");
+
+		CollectionUtils.forAllDo(this.getTransiciones().keySet(), new Closure(){
+			@Override
+			public void execute(Object arg0) {
+				final Integer origen = (Integer) arg0;
+				System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+				System.out.println("para "+ origen + " corresponden ");
+				CollectionUtils.forAllDo(((Hashtable) getTransiciones().get(origen)).keySet(), new Closure(){
+					@Override
+					public void execute(Object arg0) {
+					Object accion = arg0;
+						System.out.println(accion +" - " + ((Hashtable) getTransiciones().get(origen)).get(accion));
+					}
+				});
+
+			}
+		});
 	}
 }

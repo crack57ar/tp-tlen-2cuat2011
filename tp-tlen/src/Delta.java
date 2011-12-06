@@ -1,4 +1,3 @@
-
 public class Delta {
 	private int origen;
 	private String accion;
