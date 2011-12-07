@@ -1,0 +1,186 @@
+Lenguaje
+Se llama lenguaje (del provenzal lenguatgea y este del latín lingua) a cualquier tipo de código semiótico
+estructurado, para el que existe un contexto de uso y ciertos principios combinatorios formales. Existen contextos
+tanto naturales como artificiales.
+• El lenguaje humano se basa en la capacidad de los seres humanos para comunicarse por medio de signos.
+Principalmente lo hacemos utilizando el signo lingüístico. Aun así, hay diversos tipos de lenguaje. El lenguaje
+humano puede estudiarse en cuanto a su desarrollo desde dos puntos de vista complementarios: la ontogenia, que
+remite al proceso de adquisición del lenguaje por el ser humano, y la filogenia.
+• El lenguaje animal se basa en el uso de señales sonoras, visuales, y olfativas, a modo de signos, para señalar a un
+referente o un significado diferente de dichas señales. Dentro del lenguaje animal están los gritos de alarma, el
+lenguaje de las abejas, etc.
+• Los lenguajes formales son construcciones artificiales humanas, que se usan en matemática y otras disciplinas
+formales, incluyendo lenguajes de programación. Estas construcciones tienen estructuras internas que comparten
+con el lenguaje humano natural, por lo que pueden ser en parte analizados con los mismos conceptos que éste.
+Pre lenguaje, lenguaje, lengua o idioma, habla y dialecto
+• El pre lenguaje es un sistema de comunicación rudimentario que se aprecia en el lenguaje de los bebés, y que
+constituye la base de la adquisición de éste. Se da a través y mediante un conjunto de cualidades necesarias para
+que el bebé pueda adquirir el lenguaje, y constituyen capacidades neurofisiológicas y psicológicas entre las que
+destacan percepción, motricidad, imitación y memoria.
+• El lenguaje es una capacidad o facultad extremadamente desarrollada en el ser humano; es un sistema de
+comunicación más especializado que los de otras especies animales, a la vez fisiológico y psíquico, que pertenece
+tanto al dominio individual como al social, y que nos capacita para abstraer, conceptualizar, y comunicar. Según
+Ferdinand Saussure, en el lenguaje humano estructurado debe diferenciarse entre lengua y habla:
+a) Lengua: llamada también idioma, especialmente para usos extralingüísticos. Es un modelo general y
+constante para todos los miembros de una colectividad lingüística. Los humanos crean un número infinito de
+comunicaciones a partir de un número finito de elementos, por ejemplo a través de esquemas o mapas
+conceptuales. La representación de dicha capacidad es lo que se conoce como lengua, es decir el código. Una
+definición convencional de lengua es la de "signos lingüísticos que sirve a los miembros de una comunidad de
+hablantes para comunicarse".
+b) Habla: materialización o recreación momentánea de ese modelo en cada miembro de la colectividad
+lingüística. Es un acto individual y voluntario en el que a través de actos de fonación y escritura, el hablante
+utiliza la lengua para comunicarse. Son las diversas manifestaciones de habla las que hacen evolucionar a la
+lengua.
+• El dialecto se refiere a una variante geográfica de un idioma (por ejemplo el español dominicano hablado en la
+República Dominicana y el español hablado en Madrid). Los idiomas se expresan con rasgos distintivos en cada
+región o grupo social. Estos rasgos distintivos pueden ser de tipo fónico, morfológico, sintáctico, semántico, y
+pragmático.
+Lenguaje 2
+Características de las lenguas naturales
+El lingüista Julio Mejias habla de quince rasgos definitorios de la lengua, algunos de los cuales están presentes en la
+comunicación animal y los lenguajes formales. Sin embargo, sólo las lenguas naturales tiene estos quince rasgos de
+Hockett y, por tanto, esta lista caracteriza lo que es una lengua natural.
+Entre los rasgos más definitorios están la arbitrariedad (de la relación entre el signo y el significado), la
+productividad (que permite producir nuevos mensajes nunca antes realizados), y la estructura jerárquica (según la
+cual las lenguas humanas poseen reglas o principios sintácticos y gramaticales, por lo que las producciones no son
+aleatorias).
+Diversas definiciones
+Hay una inmensidad de definiciones sobre qué es el lenguaje humano, dependiendo de cada autor en cada época y en
+cada circunstancia. Una selección de varias de las definiciones que se le ha dado al lenguaje:[1]
+1. Por el lenguaje entendemos un sistema de códigos con cuya ayuda se designan los objetos del mundo exterior, sus
+acciones, cualidades y relaciones entre los mismos. (A. R. Luria, 1977).
+2. El lenguaje es un hábito manipulatorio (J.B. Watson, 1924).
+3. El lenguaje es un conjunto finito o infinito de oraciones, cada una de las cuales posee una extensión finita y
+construida a partir de un conjunto finito de elementos (Noam Chomsky, 1957)
+4. El lenguaje es una instancia o facultad que se invoca para explicar que todos los hombres hablan entre sí (J. P.
+Bornchart, 1957).
+Lenguaje humano
+El lenguaje humano se debe a adaptaciones evolutivas que se dan exclusivamente en seres humanos de la especie
+Homo Sapiens. La conducta lingüística en los humanos no es de tipo instintivo sino que debe ser adquirido por
+contacto con otros seres humanos. La estructura de las lenguas naturales, que son el resultado concreto de la
+capacidad humana de desarrollar lenguaje, permite de comunicar ideas y emociones por medio de un sistema de
+sonidos articulados, de trazos escritos y/o de signos convencionales, por medio de los cuales se hace posible la
+relación y el entendimiento entre individuos. El lenguaje humano permite la expresión del pensamiento y de
+exteriorización de los deseos y afectos.[2]
+La capacidad humana para el lenguaje tal como se refleja en las lenguas naturales es estudiada por la lingüística.[3]
+Se considera que la progresión de las lenguas naturales va desde el habla, y luego por la escritura y, finalmente, se
+instala una comprensión y explicación de la gramática.[2] Desde el punto de vista social e histórico el lenguaje
+humano ha dado lugar a idiomas que viven, mueren, se mudan de un lugar a otro, y cambian con el paso del tiempo.
+Cualquier idioma que deja de cambiar o de desarrollarse es categorizada como lengua muerta. Por el contrario,
+cualquier idioma por hecho de no ser una lengua muerta, y formar parte de las lenguas vivas o modernas, está
+sufriendo continuamente reajustes que acumulativamente son los responsables del llamado cambio lingüístico.
+Hacer una distinción en principio entre un idioma y otro es por lo general imposible.[4] Por ejemplo, hay algunos
+dialectos del alemán que son similares a ciertos dialectos del Holandés. La transición entre las lenguas dentro de la
+misma familia lingüística a veces es progresiva (ver dialecto continuo).
+Hay quienes hacen un paralelismo con la biología, donde no es posible hacer una distinción bien definida entre una
+especie y la siguiente. En cualquier caso, el desafío real puede ser el resultado de la interacción entre las lenguas y
+las poblaciones. (Ver dialecto o August Schleicher). Los conceptos de Ausbausprache, Abstandsprache y
+Dachsprache se utilizan para hacer distinciones más refinadas sobre los grados de diferencia entre las lenguas o
+dialectos.
+Lenguaje 3
+Neurolingüística
+Algunas de las áreas cerebrales asociadas con el
+procesamiento del lenguaje: Área de Broca
+(Azul), Área de Wernicke (Verde),
+Circunvolución Supramarginal (Amarillo),
+Circunvolución Angular (Naranjado) ,Corteza
+auditiva primaria (Rosado)
+La neurolingüística es el área disciplinar dependiente de la
+neuroanatomía que se preocupa por la computación cerebral del
+lenguaje humano. Las principales áreas del cerebro que se encargan de
+procesar el lenguaje son:
+• Área del lenguaje hablado: Área de Broca (No. 44) Hemisferio
+dominante.
+• Área de comprensión del lenguaje hablado: Área de Wernicke.
+Corresponde a las áreas de Broadman No. 21, 22, 39 y 42. Lóbulo
+temporal izquierdo.
+Patologías
+Alteraciones de lenguaje:
+• Trastornos del lenguaje oral: por causas orgánicas o por causas
+psicológicas.
+• Disartria: Dificultad para articular sílabas. Se observa en la parálisis general progresiva, lesiones de algunos
+nervios craneales y en las intoxicaciones por alcohol y barbitúricos.[5]
+• Dislalia: Sustitución, alteración u omisión de los fonemas sin que haya trastornos de los órganos del habla.[5]
+Ejemplo: Rotacismo (R), Labdacismo (L), Sigmacismo (S), Deltacismo (D), Gammacismo (G), Lalación
+(reemplazo de la R por la L).
+• Afasia: Imposibilidad para comunicarse por lenguaje hablado, leído o escrito como consecuencia de una lesión
+cerebral, una vez que el sujeto ha adquirido un lenguaje siquiera elemental.[6] Hay tres tipos:
+• Afasia motriz o de Broca (afasia de expresión): Lesión del área 44 de Broadman del hemisferio izquierdo.
+El paciente comprende lo que se le dice y sabe lo que quiere decir, pero no lo puede expresar, ni verbal ni
+escrito.[7]
+• Afasia sensorial o de Wernicke (afasia de comprensión): El paciente habla pero no coordina las palabras o
+los sonidos, oye pero no comprende las palabras que se le dirige, ve las letras y signos escritos pero es
+incapaz de leerlas (Alexia) e incapaz de escribir (Agrafia).
+• Afasia sensorial o global (Expresión - comprensión): Lesiones de los lóbulos frontal y temporal del
+hemisferio izquierdo. Imposibilidad de hablar y alteraciones de la compresión verbal, de la lectura y
+escritura.[7]
+• Disfemias: Alteración en la emisión de las palabras. Las más frecuentes son el tartamudeo y el balbuceo.
+Característico en neuróticos y psicópatas.
+• Disfonías: Alteraciones del tono y timbre de voz cuya causa reside en el aparto fonador. Ejemplo: Afonía en
+los alcohólicos, voz apagada en deprimidos.
+• Trastornos del lenguaje escrito
+• Disgrafía: Irregularidades graves en los trazos de la escritura. Ejemplo: Alcoholismo, edad, senil, parálisis general
+progresiva.
+• Agrafia y alexia: La agrafia es la imposibilidad de expresar los pensamientos por medio de la escritura. La alexia
+es la dificultad para reconocer letras.
+• Trastornos del lenguaje mímico: Cuantitativos: Hipermimia: Exageración de rasgos fisonómicos. Ejemplo:
+Excitación psicomotriz, esquizofrenias. Hipomimia: Disminución general de la mímica, se ve en los estados
+catatónicos, esquizofrenia y en la indiferencia afectiva. Amimia: Inmovilidad de los rasgos fisonómicos. No hay
+expresión afectiva. Esquizofrenia, depresión o en los estados estupurosos. Trastornos cualitativos: Paramimias:
+Expresiones no relacionadas con el estado de ánimo del sujeto. Simulaciones de los delincuentes y estados
+Lenguaje 4
+delirantes.
+El lenguaje en la naturaleza
+Comunicación química
+Depende del sentido del olfato y en algunas ocasiones del gusto. Estas señales pueden recorrer grandes distancias
+cuando son transportadas por las corrientes del aire, aunque sólo son percibidas a favor del viento. Las sustancias
+químicas específicas que producen efectos concretos que se llaman feromonas. En las colonias de abejas, por
+ejemplo, la reina produce una feromona "real" que impide el desarrollo de los ovarios de las obreras. Las feromonas
+tienen una gran importancia en lo relativo a la atracción sexual.
+Comunicación acústica
+Las ondas sonoras pueden variar de altura e intensidad con rapidez. Sirven para trasmitir mucha información. Estas
+señales viajan en todas direcciones y el receptor las localiza con facilidad.
+Por ejemplo, los monos aulladores y algunas aves, ranas y sapos poseen grandes sacos vocales que aumentan
+considerablemente los sonidos que emiten. En el caso de los sapos, emiten un sonido para atraer a la hembra y otro
+para "avisar" a otros que él también es macho. Las cigarras que cantan son machos, y lo hacen para atraer a las
+hembras. Los pollitos emiten sonidos de distinta intensidad en donde avisan a la gallina en distintas situaciones (si
+están asustados o si tienen hambre o frío). Los cocodrilos, cuando están por nacer, emiten sonidos con lo que avisan
+a su madre y ella destapa el nido subterráneo para que los pequeños puedan subir a la superficie.
+Comunicación visual
+Muchos animales diferentes usan estas señales, que se pueden encender y apagar en un instante, aunque por lo
+general son útiles en determinadas horas del día. Suelen ser llamativas o consistir en movimientos bruscos. Por
+ejemplo, una de las garras del cangrejo violinista macho es mayor que la otra, tiene colores fuertes y la sacude para
+atraer a las hembras. Los colores y diseños de las alas de las mariposas y de los machos de muchas aves atraen a sus
+compañeras en distancias cortas. Cuando vuelan por la noche, los lampíridos machos producen destellos luminosos
+con señales características, mientras que las hembras responden con sus destellos desde el suelo.
+Comunicación táctil
+La comunicación táctil se refiere a las señales transmitidas a través del contacto de la piel o partes exteriores de los
+seres vivos. Estas señales sirven al alcance de la mano y tienen una gran importancia entre los primates, como una
+forma de indicación de amistad y para tranquilizar. El hecho de que un individuo cuide al otro, por ejemplo
+eliminándole los parásitos indeseables, es su manera de reforzar los lazos familiares y de amistad. Los mecanismos
+principales son:
+• Transmisión por vibraciones. Actúan sólo en distancias muy cortas. Para indicar su presencia a las hembras, los
+machos de las arañas de estuche hacen vibrar sus membranas de un modo característico. Los cocodrilos producen
+vibraciones desde el interior de sus cuerpos para producir vibraciones que la hembra pueda percibir.
+• Transmisión eléctrica. Algunos peces que viven en los ríos lodosos de América del Sur y África usan estas
+señales capaces de atravesar cuerpos sólidos. Son utilizadas para la agresión, para el cortejo y para orientarse.
+Lenguaje 5
+Dimensiones del Lenguaje
+El lenguaje entre especies biológicas puede ser estudiado según cuatro dimensiones o aspectos diferentes que definen
+características propias de su naturaleza:
+• Formal o estructural, que se refiere a la complejidad combinatoria de los códigos usados, el medio usado para el
+mismo y los patrones en los que se basa la comunicación mediante dicho lenguaje. La dimensión estructural a su
+vez puede ser dividida en forma, contenido y uso:
+• Forma: estudiada en sus diferentes aspectos por la fonología, morfología y sintaxis. La primera comprende la
+forma material de las señales, la segunda las propiedades de formación de señales complejas y la tercera las
+propiedades combinatorias.
+• Contenido: estudiado por la semántica, que consiste en la codificación y decodificación de los contenidos
+semánticos en las estructuras lingüísticas.
+• Uso: estudiado en la pragmática, que define como la situación de uso tiene importancia tanto para las formas
+usadas como la interpretación del contenido.
+• Funcional, que se refiere a la intencionalidad con la que se usa, qué ventajas aporta y para qué casos se usa, con
+qué funciones y en qué contextos.
+• Comportamental, se refiere a todos al comportamiento exhibido por el emisor y los receptores del código, y a las
+conductas desencadentes del uso y desencadanas por el uso del lenguaje.
+• Representativa, se refiere a la intencionalidad del emisor de exponer una información sin intención de dar una
+valoración o provocar una reacción en el receptor. (ROLATER)

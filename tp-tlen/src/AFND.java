@@ -183,7 +183,7 @@ public class AFND extends AFD {
 		while(iterEstados.hasNext()){
 			estadoConcatenado += iterEstados.next();
 		}
-		return new Integer(estadoConcatenado); 
+		return estadoConcatenado.hashCode(); 
 	}
 	
 
