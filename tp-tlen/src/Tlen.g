@@ -28,8 +28,8 @@ atom returns [AFND afnd]
 		'Y' | 'Z' |
 		'0' | '1' | '2' | '3' |
 		'4' | '5' | '6' | '7' |
-		'8' | '9' | '.' ) {retval.afnd = AFND.simple($atom.text);}
-		
+		'8' | '9' | ' ' ) {retval.afnd = AFND.simple($atom.text);}
+		| '.'{retval.afnd = AFND.any();}
 		| '('expr')'{retval.afnd = $expr.afnd;};
 
 

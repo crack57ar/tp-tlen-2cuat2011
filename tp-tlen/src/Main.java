@@ -14,8 +14,8 @@ public class Main {
 	 * @param args
 	 */
 	
-	static String input = "c:/testFile.txt";
-	static String ER = "(a(b|c))*";
+	static String input = "/home/miguel/testFile.txt";
+	static String ER = "a.+";
 	
 	
 	/* podriamos usar opciones de linea de comandos, 
@@ -45,7 +45,7 @@ public class Main {
 		try {			
 			if(!parseOptions(args)){
 				printHelp();
-				return;
+				//return;
 			}
 			TlenLexer lex = new TlenLexer(new ANTLRStringStream(ER));
 			CommonTokenStream tokens = new CommonTokenStream(lex);
