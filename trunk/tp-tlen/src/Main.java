@@ -14,8 +14,8 @@ public class Main {
 	 * @param args
 	 */
 	
-	static String input = "/home/miguel/testFile.txt";
-	static String ER = "a.+";
+	static String input = "c:/test.txt";
+	static String ER = ".*(a|b|c).*";
 	
 	
 	/* podriamos usar opciones de linea de comandos, 
@@ -53,7 +53,9 @@ public class Main {
 
 			/** parseo y obtengo mi AFND **/
 			AFND afnd = parser.s();
-			
+			/** si el afnd sale null es por que hubo un problema de reconocimiento **/
+			if(afnd == null)
+				throw new RecognitionException();
 			/** lo hago deterministico **/
 			AFD afd = AFND.determinize(afnd);
 			
@@ -71,17 +73,13 @@ public class Main {
 					numero_de_linea++;
 				}
 			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				System.err.println("archivo no encontrado!");
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+				System.err.println("problemas para leer el archivo: "+e.getCause());
+			}						
 			
-			
-			
-		} catch (RecognitionException e)  {
-			System.err.println("hubo un error en la expresion regular.\nMotivo: "+e.getMessage());
+		} catch (Exception e)  {
+			System.err.println("Hubo un problema de reconocimiento en la expresion regular.\nLos caracteres validos son [a..z,A..Z,0..9, ], y los operadores {.,?,+,*,|} y ().");
 		} 
 
 	}
