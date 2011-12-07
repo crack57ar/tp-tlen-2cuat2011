@@ -342,6 +342,21 @@ public class AFND extends AFD {
 		});
 	}
 
+	public static AFND any() {
+		int nuevoInicial = 0;
+		
+		HashSet delta = new HashSet();
+		
+		for (char a = 0; a <= 256; a++) {
+			delta.add(new Delta(0, new Character(a).toString(), 1));
+		}
+				
+		HashSet finales = new HashSet();
+		finales.add(1);
+		
+		return new AFND(nuevoInicial, finales, delta);
+	}
+
 	
 
 }
