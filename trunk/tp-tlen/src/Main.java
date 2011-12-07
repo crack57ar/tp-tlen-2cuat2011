@@ -81,7 +81,7 @@ public class Main {
 			
 			
 		} catch (RecognitionException e)  {
-			e.printStackTrace();
+			System.err.println("hubo un error en la expresion regular.\nMotivo: "+e.getMessage());
 		} 
 
 	}
